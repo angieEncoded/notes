@@ -1,0 +1,58 @@
+# Chapter 2 - Initial interaction with the system
+
+- Linux graphical environment
+    - Wayland
+        - Display protocol
+        - Replaces the legacy X window system
+    - Two necessary components
+        - Display manager - or a login manager
+        - Desktop environment
+- Display\Login manager
+    - Handles the login screen
+    - Default is GNOME Display Manager (GDM)
+    - Presents a list of all normal user accounts
+    - Click 'not listed' to login as root
+- Desktop Environment
+    - Once user is validated, the display manager establishes a desktop environment
+    - Point and click GUI
+- Linux directory structure and file systems
+    - FHS - Filesystem Hierarchy Standard is used
+    - Root directory is /
+    - Paren directories stem from this
+    - Child\sub directories stem from that
+- Top-level directories
+    - Static and dynamic data
+        - System processes will update dynamic data
+    - Static directories normally have commands, config files, libs, kernel files, dev files, etc
+    - Dynamic directories have logs, status files, temp files, etc
+- Filesystem Categories
+    - Disk based
+        - Created on physical media
+    - Network based
+        - Essentially disk-based that is shared over the network 
+    - MEmory based
+        - Virtual - created at startup and destroyed at shutdown
+    - During installation two disk-based systems are created
+        - root
+        - boot
+- root file system /
+    - Top level filesystem
+    - Holds many higher level directories
+        - /etc (extended text configuration)
+            - Holds config files
+            - /systemd - configuration files
+            - /sysconfig - system services
+            - /lvm - logical volume management
+            - /skel - per-user shell startup templates
+        - /root
+            - The default home directory of the root user
+        - /mnt
+            - mount points for other filesystems
+- Boot file system /boot
+    - Has the kernel, boot support files, and config files
+- Home directory /home
+    - Stores user contents
+    - Each user gets their own directory
+- Optional directori /opt
+    - Additional software that might be installed on the system
+    
