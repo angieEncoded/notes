@@ -1,3 +1,14 @@
+- Git branching and merging
+```git checkout master```
+```git branch new-branch```
+```git checkout new-branch```
+```git add –A```
+```git commit –m "Some commit message"```
+```git checkout master```
+```git merge new-branch```
+
+
+
 - change the default git init branch name to main
 ```git config --global init.defaultBranch main```
 
