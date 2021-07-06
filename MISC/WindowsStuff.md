@@ -1,5 +1,43 @@
 # Misc Windows Notes
 
+# Printer Sharing windows 10
+Open Start > Settings > Network & Internet > Status
+Scroll to the bottom
+Click Network and Sharing Center
+
+Click Change advanced sharing settings
+Expand All Networks
+Under Password protected sharing
+
+Switch between 'Turn on password protected sharing and Turn off password protected sharing'
+
+Then choose 'Turn off password protected sharing'
+
+Then click 'Save changes'
+
+Also:
+
+Press Windows key + R
+Type: optionalfeatures.exe
+Hit Enter
+
+Scroll down to SMB 1.0/CIFS File Sharing Support
+Tick the SMB 1.0/CIFS Client
+Untick SMB 1.0/CIFS Automatic Removal and
+Untick SMB 1.0/CIFS Server 
+
+ SMB1 is deprecated and insecure
+
+    Start the "Function Discovery Provider Host" and "Function Discovery Resource Publication" services, and then set them to Automatic (Delayed Start).
+
+    When you open Explorer Network, enable network discovery when you are prompted.
+
+
+
+
+
+
+
 ## Get user Variables for export
 SET >> Environment.txt	// Get entire environment
 regedit -> HKEY_LOCAL_USER\Environment		// Get all the user's variables
