@@ -1,22 +1,22 @@
-//===========================
-// Section 5 - Structure of a C++ program
-//===========================
-Keywords: 
-Part of the vocabulary. 
-Reserved and cannot be redefined
-C++ has about 90
-C has 32
 
-Identifiers:
-Something that the programmer names, like variable names
+# Section 5 - Structure of a C++ program
 
-Operators:
-+,-,-,/
-<<	Stream insertion operator
->>	Stream extraction operator
-:: 	Scope resolution operator
+## Keywords: 
+- Part of the vocabulary. 
+- Reserved and cannot be redefined
+- C++ has about 90
+- C has 32
 
-Punctuation:
+## Identifiers:
+- Something that the programmer names, like variable names
+
+## Operators:
+- +,-,-,/
+- <<	Stream insertion operator
+- >>	Stream extraction operator
+- :: 	Scope resolution operator
+
+## Punctuation:
 Semicolons, braces, quotes, etc
 
 Syntax:
