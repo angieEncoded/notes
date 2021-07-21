@@ -1,5 +1,14 @@
 # ESXi Notes
 
+## Unlock VM if it gets hung up after a converter copy
+
+- Show lock files on the flat file
+- /vmfs/volumes/LUN/Virtual Machine Folder/file-flat.vmdk
+- Run: ```vmkfstools -D ./sco5_6_rocky-flat.vmdk```
+
+
+
+
 ## Copy vms from one machine to another
 - Turn on ssh in both hosts and open the port in the firewall in ESXi
 - test connection to the remote server
