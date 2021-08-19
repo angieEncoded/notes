@@ -1,4 +1,5 @@
 # Notes on setting up a mail server
+
 - SE Linux seems to be the major culprit
 
 ```sealert -l a58f362f-7c41-4994-9495-c8628523cf53```
@@ -163,11 +164,11 @@ namespace inbox {
 - Run the first part of the tool - this will convert the main file at /var/spool/mail
 ```mb2md -m ```
 - Run the second part of the tool which will convert all the other folders correctly. This is the 'mail' folder that is already in the user's folder
-```mb2md -s mail```
+```mb2md -s mail -R```
 - Exit the user's shell
 - Perform some cleanup on old directories
 ```mv /var/spool/mail/daniel /var/spool/mail/daniel.preMaildir``` 
-```mv ~daniel/mail ~daniel/mail.preMaildir```
+```mv ~daniel/mail ~daniel/mail.preMaildir```ls
 
 
 # Pre-requisites for the script to run 
