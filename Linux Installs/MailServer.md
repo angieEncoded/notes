@@ -159,25 +159,32 @@ namespace inbox {
 
 # Run the tool on the necessary mailboxes
 - Frst su over to the actual user
-``` su - username```
+` su - username`
 - CD into their home directoru
-```cd ~```
+`cd ~`
 - Run the first part of the tool - this will convert the main file at /var/spool/mail
-```mb2md -m ```
+`mb2md -m `
 - Run the second part of the tool which will convert all the other folders correctly. This is the 'mail' folder that is already in the user's folder
-```mb2md -s mail -R```
+`mb2md -s mail -R`
 - Exit the user's shell
 - Perform some cleanup on old directories
-```mv /var/spool/mail/daniel /var/spool/mail/daniel.preMaildir``` 
-```mv ~daniel/mail ~daniel/mail.preMaildir```ls
+`mv /var/spool/mail/username /var/spool/mail/daniel.preMaildir`
+
+`mv ~username/mail ~username/mail.preMaildir`
+
 
 
 # Pre-requisites for the script to run 
 - Full install of perl - I had to run dnf install perl because the version it shipped with wasn't installed as expected.
+
 ```dnf install perl```
+
 - Run this to be able to easily install Perl modules
+
 ```cpan App::cpanminus```
+
 - Install the module that mb2md required
+
 ```cpanm Date::Parse ```
 
 ## Configure the certificate for Webmin and Usermin
