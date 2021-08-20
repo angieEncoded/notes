@@ -2,7 +2,8 @@
 
 - SE Linux seems to be the major culprit
 
-```sealert -l a58f362f-7c41-4994-9495-c8628523cf53```
+`sealert -l a58f362f-7c41-4994-9495-c8628523cf53`
+
 - The below message is what I got in /var/log/messages when setting up a new user.
 
 > SELinux is preventing /usr/libexec/dovecot/lmtp from write access on the directory bubble.
@@ -12,11 +13,13 @@
 > You can generate a local policy module to allow this access.
 > allow this access for now by executing:
 
-```ausearch -c 'lmtp' --raw | audit2allow -M my-lmtp```
-```semodule -X 300 -i my-lmtp.pp```
+`ausearch -c 'lmtp' --raw | audit2allow -M my-lmtp`
 
- ```ausearch -c 'imap' --raw | audit2allow -M my-imap```
- ```semodule -X 300 -i my-imap.pp```
+`semodule -X 300 -i my-lmtp.pp`
+
+`ausearch -c 'imap' --raw | audit2allow -M my-imap`
+
+ `semodule -X 300 -i my-imap.pp`
 
 ## Configure Usermin for IMAP
 
