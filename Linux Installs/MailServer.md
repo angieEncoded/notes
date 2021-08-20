@@ -179,6 +179,32 @@ namespace inbox {
 - Install the module that mb2md required
 ```cpanm Date::Parse ```
 
+## Configure the certificate for Webmin and Usermin
+
+- Copy all the certs to the server as well as the private key
+- Create a new .pem file with 
+`cat cat private.key your_common_name.crt > new_miniserv.pem`
+- Copy this file and all the intermediate certificates to /etc/webmin and /etc/usermin (they do not share!)
+  - Note = You can also use a text editor to create the PEM file. Just paste the private key at the top immediately followed by your SSL certificate
+- This is what it looks like
+
+> -----BEGIN RSA PRIVATE KEY-----
+> (Contents of private key)
+> -----END RSA PRIVATE KEY-----
+> -----BEGIN CERTIFICATE-----
+> (Contents of SSL certificate: your_domain_name.crt)
+> -----END CERTIFICATE-----
+
+- Make a backup copy of your current miniserv.pem file, then replace miniserv.pem with your new_miniserv.pem file.
+- Add an "extracas" line to your miniserv.conf file which references your intermediate certificate file by its full path, such as:
+  - extracas=/etc/webmin/DigiCertCA.crt
+    - If you have more than one intermediate certificate file, you can list them on the same line, separated by spaces.
+- Restart webmin and visit its URL in a web browser. 
+`systemctl restart webmin`
+`systemctl restart usermin`
+
+
+
 
 - Before and after commands to create a mail spool file - but I think this wasn't needed. I believe that the problem was the SE linux, the Maildir Dovecot setup doesn't seem to use the spool file
 at all.
