@@ -149,10 +149,10 @@ namespace inbox {
 ~~~
 
 # Install the md2mb script on Alma
-```wget http://batleth.sapienti-sat.org/projects/mb2md/mb2md-3.20.pl.gz````
-```gunzip mb2md-3.20.pl.gz```
-```mv mb2md-3.20.pl /usr/bin/mb2md```
-```chmod 755 /usr/bin/mb2md```
+`wget http://batleth.sapienti-sat.org/projects/mb2md/mb2md-3.20.pl.gz`
+`gunzip mb2md-3.20.pl.gz`
+`mv mb2md-3.20.pl /usr/bin/mb2md`
+`chmod 755 /usr/bin/mb2md`
 
 # Run the tool on the necessary mailboxes
 - Frst su over to the actual user
