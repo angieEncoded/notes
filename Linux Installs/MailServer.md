@@ -197,10 +197,15 @@ namespace inbox {
 - This is what it looks like
 
 > -----BEGIN RSA PRIVATE KEY-----
+> 
 > (Contents of private key)
+> 
 > -----END RSA PRIVATE KEY-----
+> 
 > -----BEGIN CERTIFICATE-----
+> 
 > (Contents of SSL certificate: your_domain_name.crt)
+> 
 > -----END CERTIFICATE-----
 
 - Make a backup copy of your current miniserv.pem file, then replace miniserv.pem with your new_miniserv.pem file.
