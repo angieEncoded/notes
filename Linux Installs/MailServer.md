@@ -208,7 +208,9 @@ namespace inbox {
   - extracas=/etc/webmin/DigiCertCA.crt
     - If you have more than one intermediate certificate file, you can list them on the same line, separated by spaces.
 - Restart webmin and visit its URL in a web browser. 
+
 `systemctl restart webmin`
+
 `systemctl restart usermin`
 
 
