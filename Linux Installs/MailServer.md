@@ -5,15 +5,12 @@
 ```sealert -l a58f362f-7c41-4994-9495-c8628523cf53```
 - The below message is what I got in /var/log/messages when setting up a new user.
 
-~~~~
-SELinux is preventing /usr/libexec/dovecot/lmtp from write access on the directory bubble.
-#012#012***** Plugin catchall (100. confidence) suggests   **************************#012#012
-If you believe that lmtp should be allowed write access on the bubble directory by default.
-Then you should report this as a bug.
-You can generate a local policy module to allow this access.
-allow this access for now by executing:
-~~~~
-
+> SELinux is preventing /usr/libexec/dovecot/lmtp from write access on the directory bubble.
+> #012#012***** Plugin catchall (100. confidence) suggests   **************************#012#012
+> If you believe that lmtp should be allowed write access on the bubble directory by default.
+> Then you should report this as a bug.
+> You can generate a local policy module to allow this access.
+> allow this access for now by executing:
 
 ```ausearch -c 'lmtp' --raw | audit2allow -M my-lmtp```
 ```semodule -X 300 -i my-lmtp.pp```
@@ -29,7 +26,8 @@ allow this access for now by executing:
 - Change the 'Mailboxes directory under home directory' field to Maildir, and click Save.
 
 ## Set up the folders correctly for most possible outcomes
-```
+
+~~~
 namespace inbox {
   type = private
   separator = .
@@ -89,10 +87,10 @@ namespace inbox {
     auto = no
   }
 }
-```
+~~~
 
 
-```
+~~~
 namespace inbox {
   type = private
   separator = .
@@ -148,7 +146,7 @@ namespace inbox {
     auto = no
   }
 }
-```
+~~~
 
 # Install the md2mb script on Alma
 ```wget http://batleth.sapienti-sat.org/projects/mb2md/mb2md-3.20.pl.gz````
