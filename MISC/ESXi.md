@@ -1,5 +1,11 @@
 # ESXi Notes
 
+## Remove invalid VMs using the CLI
+- vim-cmd /vmsvc/getallvms to list all registered VMs
+- get the ID of the VM you removed the files for (the first column of output). Mine said invalid vm skipped but showed the ID
+- vim-cmd /vmsvc/unregister <id> to unregister that VM.
+
+
 ## Unlock VM if it gets hung up after a converter copy
 
 - Show lock files on the flat file
