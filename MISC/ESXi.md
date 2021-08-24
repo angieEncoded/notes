@@ -13,8 +13,6 @@
 - Run: ```vmkfstools -D ./sco5_6_rocky-flat.vmdk```
 
 
-
-
 ## Copy vms from one machine to another
 - Turn on ssh in both hosts and open the port in the firewall in ESXi
 - test connection to the remote server

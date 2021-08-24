@@ -1,4 +1,17 @@
-# Basic Debian 10 Setup
+# Debian
+
+## Debian 11 Setup 
+- Add the user to the sudoers group (not wheel)
+    - `usermod -aG sudo stackdev`
+- Take the CD ROM entry out of the sources.list
+    - Stop it from looking at that for packages
+    - `nano /etc/apt/sources.list`
+    - comment out the cd rom line
+- Install firewalld
+    - `apt install firewalld`
+    - Remember to refresh the modules in webmin
+
+## Basic Debian 10 Setup
 
 - Install open-vm-tools
     - ```apt-get install open-vm-tools```
