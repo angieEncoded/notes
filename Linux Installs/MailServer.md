@@ -194,7 +194,7 @@ namespace inbox {
 
 - Copy all the certs to the server as well as the private key
 - Create a new .pem file with 
-`cat cat private.key your_common_name.crt > new_miniserv.pem`
+`cat private.key your_common_name.crt > new_miniserv.pem`
 - Copy this file and all the intermediate certificates to /etc/webmin and /etc/usermin (they do not share!)
   - Note = You can also use a text editor to create the PEM file. Just paste the private key at the top immediately followed by your SSL certificate
 - This is what it looks like
